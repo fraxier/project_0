@@ -6,6 +6,7 @@
     // Page font
     font-family: 'Poppins', sans-serif;
 */
+/* ===============Body + Fonts================== */
 
 html {
     font-family: 'Poppins', sans-serif;
@@ -17,4 +18,23 @@ h1 {
 }
 h1 span {
     font-size: 1.5em;
+}
+
+/* ====================================== */
+
+#splash {
+    background-color: #333;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(80% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
+}
+#splash h1 {
+    text-align: center;
+    font-size: 4em;
+}
+#splash h1::after {
+    content: " ";
+    display: block;
+
 }
