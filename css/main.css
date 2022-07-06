@@ -21,6 +21,7 @@
 html {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    color: #333;
 }
 h1 {
     font-family: 'Finlandica', sans-serif;
@@ -72,22 +73,22 @@ h1 span {
 }
 @keyframes color-rainbow {
     0% {
-        color: #E82121;
+        color: #E82121aa;
     }
     20% {
-        color: #139A43;
+        color: #139A43aa;
     }
     40% {
-        color: #2685E3;
+        color: #2685E3aa;
     }
     60% {
-        color: #A639BF;
+        color: #A639BFaa;
     }
     80% {
-        color: #FFB41F;
+        color: #FFB41Faa;
     }
     100% {
-        color: #E82121;
+        color: #E82121aa;
     }
 }
 @keyframes border-left-rainbow {
@@ -175,7 +176,7 @@ h1 span {
         border-width: 10px;
     }
     100% {
-        border-width: 0;
+        border-width: 1px;
     }
 }
 
@@ -245,3 +246,49 @@ h1 span {
     animation: fadein 1s ease 4.5s 1 forwards
              , fadeout 1s ease 6s forwards;
 }
+
+/* =============== Navigation =============== */
+nav {
+    height: 75px;
+    padding: 10px 0;
+    border-bottom: 3px solid #eee;
+}
+h1#logo {
+    font-size: 2rem;
+    float: left;
+    width: 25%;
+    color: #333;
+    text-align: center;
+    transition: transform .3s;
+}
+h1#logo:hover {
+    transform: skew(15deg, 15deg);
+}
+#navigation {
+    list-style: none;
+    float: left;
+    height: 100%;
+    width: 75%;
+}
+#navigation li {
+    box-sizing: content-box;
+    width: fit-content;
+    height: 100%;
+    line-height: 57px;
+    float: left;
+    margin-left: 2em;
+    color: #333;
+    font-size: 1.2em;
+    text-align: left;
+    transition: font-weight .1s;
+}
+
+#navigation li:hover {
+    font-weight: bold;
+    animation: color-rainbow 2s infinite;
+}
+
+
+
+
+
