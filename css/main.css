@@ -6,7 +6,17 @@
     // Page font
     font-family: 'Poppins', sans-serif;
 */
-/* ===============Body + Fonts================== */
+
+/*  Coolors
+#E82121 Red Pigment
+#139A43 Green Pigment
+#2685E3 Bleu De France
+#A639BF Dark Orchid
+#FFB41F Honey Yellow
+*/
+
+
+/* =============== Body + Fonts ================== */
 
 html {
     font-family: 'Poppins', sans-serif;
@@ -20,21 +30,218 @@ h1 span {
     font-size: 1.5em;
 }
 
-/* ====================================== */
+/* ================ Animations =============== */
 
+/* CSS Syntax | animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+
+@keyframes diagonal-move-fade-out {
+    
+    0% {
+        top: 0;
+        right: 0;
+        opacity: 100%;
+    }
+
+    100% {
+        top: 100vh;
+        right: 100vw;
+        opacity: 0%;
+    }
+}
+@keyframes fadein {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+@keyframes fadeout {
+    0% {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+    
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+@keyframes color-rainbow {
+    0% {
+        color: #E82121;
+    }
+    20% {
+        color: #139A43;
+    }
+    40% {
+        color: #2685E3;
+    }
+    60% {
+        color: #A639BF;
+    }
+    80% {
+        color: #FFB41F;
+    }
+    100% {
+        color: #E82121;
+    }
+}
+@keyframes border-left-rainbow {
+    0% {
+        border-left-color: #E82121;
+    }
+    20% {
+        border-left-color: #139A43;
+    }
+    40% {
+        border-left-color: #2685E3;
+    }
+    60% {
+        border-left-color: #A639BF;
+    }
+    80% {
+        border-left-color: #FFB41F;
+    }
+    100% {
+        border-left-color: #E82121;
+    }
+}
+@keyframes border-right-rainbow {
+    0% {
+        border-right-color: #E82121;
+    }
+    20% {
+        border-right-color: #139A43;
+    }
+    40% {
+        border-right-color: #2685E3;
+    }
+    60% {
+        border-right-color: #A639BF;
+    }
+    80% {
+        border-right-color: #FFB41F;
+    }
+    100% {
+        border-right-color: #E82121;
+    }
+}
+@keyframes border-top-rainbow {
+    0% {
+        border-top-color: #E82121;
+    }
+    20% {
+        border-top-color: #139A43;
+    }
+    40% {
+        border-top-color: #2685E3;
+    }
+    60% {
+        border-top-color: #A639BF;
+    }
+    80% {
+        border-top-color: #FFB41F;
+    }
+    100% {
+        border-top-color: #E82121;
+    }
+}
+@keyframes border-bottom-rainbow {
+    0% {
+        border-bottom-color: #E82121;
+    }
+    20% {
+        border-bottom-color: #139A43;
+    }
+    40% {
+        border-bottom-color: #2685E3;
+    }
+    60% {
+        border-bottom-color: #A639BF;
+    }
+    80% {
+        border-bottom-color: #FFB41F;
+    }
+    100% {
+        border-bottom-color: #E82121;
+    }
+}
+@keyframes border-shrink {
+    0% {
+        border-width: 10px;
+    }
+    100% {
+        border-width: 0;
+    }
+}
+
+/* ============= Splash Screen =============== */
 #splash {
-    background-color: #333;
-    position: absolute;
+    background-color: white;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    clip-path: polygon(80% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
+    /* clip-path: polygon(80% 0, 100% 30%, 100% 100%, 0 100%, 0 0); */
+    color: black;
+    animation: diagonal-move-fade-out 2s 10.5s 1 forwards; 
+    /* forwards will keep state defined at end of animation */
+}
+#splash .inner-border {
+    /* inner border width set here, match with animation */
+    border: 10px solid transparent; 
+    position: fixed;
+    height: 90vh;
+    width: 95vw;
+    margin: 5vh auto;
+    left: 2.5vw;
+
+    /* delay of 1.05s creates an illusion of the colours travelling from one border to the next */
+    animation: border-left-rainbow 1s ease 1s infinite
+            , border-top-rainbow 1s ease 2.1s infinite
+            , border-right-rainbow 1s ease 3.2s infinite
+            , border-bottom-rainbow 1s ease 4.3s infinite
+            , border-shrink 1s ease 9.5s 1 forwards;
+}
+.inner-border button {
+    position: relative;
+    left: 88vw;
+    top: 79vh;
+    background: none;
+    border: 1px solid #cacaca;
+    border-radius: 7px;
+    padding: 1vh 1vw;
+    color: #cacaca;
+    cursor: pointer;
+}
+#splash .text {
+    text-align: center;
+    margin-top: 5vh;
+    opacity: 0;
+}
+#splash h2.text {
+    /* larger margin for first child */
+    margin-top: 35vh;
+    font-size: 3em;
+    
+    animation: fadein 1s ease 5s 1 forwards
+            , fadeout 1s ease 9s 1 forwards;
+}
+#splash h3 {
+    font-size: 2em;
+    animation: fadein 1s ease 5.5s 1 forwards
+            , fadeout 1s ease 8.5s 1 forwards;
 }
 #splash h1 {
-    text-align: center;
-    font-size: 4em;
-}
-#splash h1::after {
-    content: " ";
-    display: block;
+    /* Required for border bottom line to be not 100% vw */
+    width: fit-content;
+    margin: 0 auto;
+    border-bottom: 3px solid black;
 
+    font-size: 4em;
+    animation: fadein 1s ease 6s 1 forwards
+             , fadeout 1s ease 8s forwards;
 }
