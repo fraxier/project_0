@@ -253,6 +253,14 @@ nav {
     padding: 10px 0;
     border-bottom: 3px solid #eee;
 }
+nav img {
+    float: left;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 7%;
+    top: 22px;
+}
 h1#logo {
     font-size: 2rem;
     float: left;
@@ -260,6 +268,18 @@ h1#logo {
     color: #333;
     text-align: center;
     transition: transform .3s;
+}
+/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+h1#logo::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: 1px;
+    background-image: url("../images/face.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 h1#logo:hover {
     transform: rotate(180deg);
@@ -281,13 +301,15 @@ h1#logo:hover {
     font-size: 1.2em;
     transition: font-size .1s;
 }
-
 #navigation li:hover {
     font-size: 1.5em;
     animation: color-rainbow 2s infinite;
 }
 
+/* =============== Intro =============== */
 
-
+#intro img {
+    height: 350px;
+}
 
 
