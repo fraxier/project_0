@@ -262,7 +262,7 @@ h1#logo {
     transition: transform .3s;
 }
 h1#logo:hover {
-    transform: skew(15deg, 15deg);
+    transform: rotate(180deg);
 }
 #navigation {
     list-style: none;
@@ -273,18 +273,17 @@ h1#logo:hover {
 #navigation li {
     box-sizing: content-box;
     width: fit-content;
-    height: 100%;
     line-height: 57px;
-    float: left;
     margin-left: 2em;
+    height: 100%;
+    float: left;
     color: #333;
     font-size: 1.2em;
-    text-align: left;
-    transition: font-weight .1s;
+    transition: font-size .1s;
 }
 
 #navigation li:hover {
-    font-weight: bold;
+    font-size: 1.5em;
     animation: color-rainbow 2s infinite;
 }
 
