@@ -179,6 +179,28 @@ h1 span {
         border-width: 1px;
     }
 }
+@keyframes pulse-arrow {
+    0% {
+        transform: scale(1.0) rotate(180deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+        transform: scale(1.0) rotate(180deg);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
 
 /* ============= Splash Screen =============== */
 #splash {
@@ -253,14 +275,6 @@ nav {
     padding: 10px 0;
     border-bottom: 3px solid #eee;
 }
-nav img {
-    float: left;
-    height: 25px;
-    width: 25px;
-    position: absolute;
-    left: 7%;
-    top: 22px;
-}
 h1#logo {
     font-size: 2rem;
     float: left;
@@ -269,34 +283,51 @@ h1#logo {
     text-align: center;
     transition: transform .3s;
 }
-/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+/* this method becomes tedious, can't put a class on a pseudo-element */
 h1#logo::before {
     content: "";
     display: inline-block;
     width: 25px;
     height: 25px;
-    margin-top: 1px;
+    margin-right: 3px;
+    background-image: url("../images/Samurai.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+h1#logo::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 3px;
     background-image: url("../images/face.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
+    border-radius: 8px;
 }
 h1#logo:hover {
     transform: rotate(180deg);
 }
 #navigation {
     list-style: none;
+}
+#navigation a {
     float: left;
-    height: 100%;
-    width: 75%;
+}
+#navigation img {
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: sub;
 }
 #navigation li {
     box-sizing: content-box;
     width: fit-content;
     line-height: 57px;
-    margin-left: 2em;
+    margin-right: 2em;
     height: 100%;
-    float: left;
+    display: inline-block;
     color: #333;
     font-size: 1.2em;
     transition: font-size .1s;
@@ -306,10 +337,27 @@ h1#logo:hover {
     animation: color-rainbow 2s infinite;
 }
 
-/* =============== Intro =============== */
-
-#intro img {
-    height: 350px;
+/* =============== Body ================ */
+.container {
+    width: 960px;
+    margin: 2vh auto;
 }
+/* =============== Intro =============== */
+/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
+#banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background: url('../images/banner.png') no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+}
+
+#intro {
+
+}
+
+
 
 
