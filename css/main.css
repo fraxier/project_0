@@ -346,12 +346,27 @@ h1#logo:hover {
 /* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
 #banner {
     position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 10vh;
+    bottom: 5%;
+    right: -530px;
+    width: 538px;
+    height: 55px;
     background: url('../images/banner.png') no-repeat;
     background-size: 100% auto;
     background-position: top;
+    box-shadow: 2px 2px 2px #333333aa;
+    transition: right 2s;
+}
+#banner::before {
+    content: "";
+    clip-path: polygon(70% 50%, 100% 100%, 100% 0);
+    background: #320a00;
+    display: block;
+    height: 55px;
+    width: 56px;
+    margin-left: -55.5px;
+}
+#banner:hover {
+    right: 0;
 }
 
 #intro {
