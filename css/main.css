@@ -34,6 +34,13 @@ h1 {
 h1 span {
     font-size: 1.5em;
 }
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    font-size: 14px;
+    padding: 0 3px;
+}
 
 /* ================ Animations =============== */
 
@@ -370,7 +377,8 @@ body {
     border-radius: 0 0 3px 3px;
     height: calc(100vh - 75px);
     overflow-y: scroll;
-    scroll-behavior: smooth;
+    /* disable smooth scroll when debugging */
+    /* scroll-behavior: smooth; */
 }
 /* Browser setting for people who get motion sick and have it turned on */
 @media screen and (prefers-reduced-motion: reduce) {
@@ -446,6 +454,7 @@ body {
     float: right;
     width: 15px;
     text-align: center;
+    font-size: 1.2em;
 }
 .terminal .bar span::before{
     content: "";
@@ -472,5 +481,28 @@ body {
     color: #2685E3;
 }
 
+/* =========== HTML =============== */
+
+#html table {
+    border: 1px solid #3333;
+    width: 100%;
+}
+#html table thead {
+    color: white;
+    background-color: #555;
+}
+#html table th[scope="row"]
+
+#html legend {
+
+}
+.role-check {
+    display: inline-block;
+    margin-right: 20px;
+}
+.role-check img {
+    display: inline-block;
+    vertical-align: middle;
+}
 
 
