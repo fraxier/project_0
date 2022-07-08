@@ -356,9 +356,7 @@ h1#logo:hover {
 }
 
 /* =============== Body ================ */
-body {
-    
-}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -391,7 +389,7 @@ body {
     height: calc(100vh - 75px);
     overflow-y: scroll;
     /* disable smooth scroll when debugging */
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 /* Browser setting for people who get motion sick and have it turned on */
 @media screen and (prefers-reduced-motion: reduce) {
