@@ -31,21 +31,29 @@
             <h1 class="text">FRAnCIS</h1>
             
         </div> -->
-
+        
+        <audio id="bgm" controls loop>
+            <source src="./sounds/FFXIV_Uldah.mp3" type="audio/mp3">
+        </audio>
         <nav>
             <a href="#intro">
                 <h1 id="logo">Francis</h1>
             </a>
             <ul id="navigation">
-                <a href="#git"><img class="nav-icon" src="./images/DPSRole.png"/><li>Git/CLI</li></a>
-                <a href="#html"><img class="nav-icon" src="./images/TankRole.png"/><li>HTML</li></a>
-                <a href="#css"><img class="nav-icon" src="./images/HealerRole.png"/><li>CSS</li></a>
+                <a class="teehee" href="#git"><img class="nav-icon" src="./images/DPSRole.png"/><li>Git/CLI</li></a>
+                <a class="teehee" href="#html"><img class="nav-icon" src="./images/TankRole.png"/><li>HTML</li></a>
+                <a class="teehee" href="#css"><img class="nav-icon" src="./images/HealerRole.png"/><li>CSS</li></a>
                 <a href="#"><img class="nav-icon" src="./images/BlueMage.png"/><li>Secret Blog</li></a>
             </ul>
+            
         </nav>
         
         <div id="banner">
-            
+            <div class="announcement">
+                <img src="./images/tataru.png" alt="Why it's Tataru!" title="Where are you going Tataru?"/>
+                <img src="./images/castaway-chocobo-chick.png" alt="Baby blue chocoboo!" title="Chocobaby blue!" />
+                <img src="./images/coblyn.png" alt="Cob-Coblyn for the win!" title="Rock on in coblyn!" />
+            </div>
         </div>
         <div class="container">
             <section id="intro">
@@ -55,7 +63,8 @@
                 
                 <p>In saying that please point out whatever you think could be implemented better and I'll take it all onboard! I have added some ffxiv spice to keep things lively, I hope you enjoy it as much as I do having added them!</p><br>
                 <p>Once again, very much appreciated! Please enjoy your time here :)</p><br> 
-                <p>Kind Regards<br><span>Francis</span></p>
+                <p>Kind Regards<br></p>
+                <h1>Francis</h1>
             </section>
             <section id="git">
                 <h1>Git/CLI</h1>
@@ -113,7 +122,7 @@
                             <form>
                                 <legend><h2>What party roles do you like to play?</h2></legend>
                                 <div class="role-check">
-                                    <label for="tank"><p>Tank</p><img src="./images/TankRole.png" alt="Bonk!!" title="I Bonk You!"/></label>
+                                    <label for="tank"><p>Tank</p><img src="./images/TankRole.png" alt="Bonk!!" title="Bonk!!"/></label>
                                     <input type="checkbox" id="tank" name="tank" value="Tank">
                                 </div>
                                 <div class="role-check">
@@ -163,8 +172,7 @@
                 </div>
             </section>
         </div>
-
-        <script src="./js/main.js" async defer></script>
+        <script src="./js/main.js" defer></script>
 
     </body>
 </html>
