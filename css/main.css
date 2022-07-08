@@ -20,11 +20,9 @@
 
 html {
     font-family: 'Poppins', sans-serif;
+    background-color: #c5bbaa;
     font-size: 16px;
-    color: #333;
-    /* background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%); */
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    color: rgb(68, 52, 52);
     height: 100%;
 }
 h1 {
@@ -284,14 +282,32 @@ code {
 nav {
     height: 75px;
     padding: 10px 0;
-    border-bottom: 3px dashed #33333330;
+    background-color: #c5bbaa;
+    position: relative;
+}
+nav::before {
+    content: "";
+    width: 100%;
+    border-top: 2px dashed #F0EBE3;
+    display: block;
+    position: absolute;
+    top: 1px;
+}
+nav::after {
+    content: "";
+    width: 100%;
+    border-top: 2px dashed #F0EBE3;
+    display: block;
+    position: absolute;
+    bottom: 1px;
 }
 h1#logo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     float: left;
     width: 25%;
     color: #333;
     text-align: center;
+    filter: drop-shadow(-2px 2px 1px #33333388);
     transition: transform .5s;
 }
 /* this method becomes tedious, can't put a class on a pseudo-element */
@@ -325,12 +341,20 @@ h1#logo:hover {
 }
 #navigation a {
     float: left;
+    transform: scale(1);
+    transition: transform .1s;
+}
+#navigation a:hover {
+    font-weight: bold;
+    filter: drop-shadow(2px 2px 1px #333333dd);
+    transform: scale(1.5);
 }
 #navigation img {
     height: 25px;
     width: 25px;
     display: inline-block;
     vertical-align: sub;
+    margin-right: 5px;
 }
 #navigation li {
     box-sizing: content-box;
@@ -340,13 +364,7 @@ h1#logo:hover {
     height: 100%;
     display: inline-block;
     color: #333;
-    text-shadow: 1px 1px 2px white;
     font-size: 1.2em;
-    transition: font-size .1s;
-}
-#navigation li:hover {
-    font-size: 1.5em;
-    animation: color-rainbow 2s infinite;
 }
 
 /* =============== Body ================ */
@@ -373,7 +391,7 @@ body {
     width: 960px;
     margin: 0 auto;
     padding: 4% 5%;
-    background-color: white;
+    background-color: #F0EBE3;
     border-radius: 0 0 3px 3px;
     height: calc(100vh - 75px);
     overflow-y: scroll;
@@ -388,6 +406,10 @@ body {
 }
 .container h1 {
     margin-top: 5%;
+    color: #576F72;
+}
+.container b {
+    color: #576F72;
 }
 #intro h1 {
     margin-top: 0;
@@ -488,10 +510,23 @@ body {
     width: 100%;
 }
 #html table thead {
-    color: white;
-    background-color: #555;
+    background-color: #576F72;
+    padding: 1em;
 }
-#html table th[scope="row"]
+#html table th[scope="row"] {
+    color: white;
+    background-color: #7D9D9C;
+}
+html table th[scope="col"] {
+    color: white;
+    padding: 1em;
+}
+#html table td {
+    background-color: white;
+    border: 1px solid #3333;
+    text-align: center;
+    padding: 2em;
+}
 
 #html legend {
 
@@ -503,6 +538,90 @@ body {
 .role-check img {
     display: inline-block;
     vertical-align: middle;
+    height: 40px;
+    width: 40px;
+}
+.role-check input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#healer { /* change "blue" browser chrome to green */
+    filter: hue-rotate(250deg);
+}
+#dps {
+    filter: hue-rotate(140deg);
 }
 
-
+/* ============ CSS =========== */
+.model {
+    width: 100%;
+    padding: 3em 10%;
+    text-align: center;
+    position: relative;
+    border: 1px solid #333;
+}
+#margin {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+#margin::before {
+    content: "Margin";
+    font-size: 1.4em;
+    position: absolute;
+    left: 0.5%;
+    top: 3.7%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+#border {
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+}
+#border::before {
+    content: "Border";
+    font-size: 1.4em;
+    position: absolute;
+    left: 0.5%;
+    top: 3.7%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+#border::after {
+    content: "The border defines 4 visible lines that surround the HTML element, you can add whacky colours and styles to these lines!";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: fit-content;
+    padding: 1em;
+    text-align: left;
+    color: white;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+#padding {
+    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+}
+#padding::before {
+    content: "Padding";
+    font-size: 1.4em;
+    position: absolute;
+    left: 0.5%;
+    top: 3.7%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+#content {
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+#content::before {
+    content: "Content";
+    font-size: 1.4em;
+    position: absolute;
+    left: 0.5%;
+    top: 3.7%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}

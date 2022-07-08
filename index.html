@@ -92,25 +92,28 @@
                 <br>
                 <p>HTML achieves this with TAGS. HTML has tags for everything! Thinking of using a div? <b>¡THINK AGAIN!</b></p>
                 <p><b>TAG THAT GOOD THING WITH</b> something <i>S E M A N T I C</i></p>
-                <p>Take a look at some of these beauties</p>
+                <br>
+                <p>Have a gander at these example tags</p>
                 <table id="tag-table">
                     <tr>
                         <thead>    
-                            <th>Tag name</th>
-                            <th>Example</th>
+                            <th scope="col">Tag name</th>
+                            <th scope="col">Example</th>
                         </thead>
                     </tr>
                     <tr>
                         <th scope="row">code</td>
-                        <td><code>string mentalState = chocolate ? "awweessuummm" : "life sucks";</code></td>
+                        <td>
+                            <code>string mentalState = hasChocolate ? "cloud9 babyyy" : "life sucks";</code>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">form</td>
                         <td>
                             <form>
-                                <legend>Which DPS role do you like to play?</legend>
+                                <legend><h2>What party roles do you like to play?</h2></legend>
                                 <div class="role-check">
-                                    <label for="tank"><p>Tank</p><img src="./images/TankRole.png" alt="I Bonk You!" title="I Bonk You!"/></label>
+                                    <label for="tank"><p>Tank</p><img src="./images/TankRole.png" alt="Bonk!!" title="I Bonk You!"/></label>
                                     <input type="checkbox" id="tank" name="tank" value="Tank">
                                 </div>
                                 <div class="role-check">
@@ -126,18 +129,32 @@
                     </tr>
                     <tr>
                         <th scope="row">audio</td>
-                        <td><audio controls>
+                        <td><audio controls title="Careful! I'm loud :D">
                             <source src="./sounds/FFXIV_Enlist_Immortal_Flames.mp3" type="audio/mp3">
                         </audio></td>
                     </tr>
                     <tr>
                         <th scope="row">iframe</td>
-                        <td><div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/KGf5wKBgdhbTwDh1dK/video" width="480"></iframe></div></td>
+                        <td><div style="width:480px; margin: 0 auto;"><iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/KGf5wKBgdhbTwDh1dK/video" width="480"></iframe></div></td>
                     </tr>
                 </table>
             </section>
             <section id="css">
                 <h1>CSS</h1>
+                <p>CSS, also known as Cascading Style Sheet, is where the fun starts to happen. HTML is cool and all but CSS? Just <span>Wow.</span>Where to start?</p>
+                <br>
+                <p>Actually, the best place to start is what is known as the box model. Remember all those tags and divs from HTML? Now imagine every one of those contained in their own little 4 cornered box. CSS allows us to manipulate the width, height, length, space and S T Y L E that goes on inside these boxes.</p>
+                <br>
+                <p>Let's dive in and break down the components of the CSS box model</p>
+
+                <div id="margin" class="model">
+                    <div id="border" class="model">
+                        <div id="padding" class="model">
+                            <div id="content" class="model">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
 
