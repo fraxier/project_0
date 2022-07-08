@@ -555,73 +555,124 @@ html table th[scope="col"] {
 }
 
 /* ============ CSS =========== */
+#box-model {
+    position: relative;
+    padding-bottom: 400px;
+}
 .model {
     width: 100%;
-    padding: 3em 10%;
+    height: 100px;
+    line-height: 50px;
     text-align: center;
-    position: relative;
+    position: absolute;
     border: 1px solid #333;
 }
-#margin {
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+.model h2 {
+    display: inline-block;
+    vertical-align: middle;
 }
-#margin::before {
-    content: "Margin";
-    font-size: 1.4em;
-    position: absolute;
-    left: 0.5%;
-    top: 3.7%;
+#margin {
+    background-color: #D61C4E;
     width: 100%;
-    text-align: center;
-    font-weight: bold;
+    height: 400px;
+}
+#margin::after {
+    content: "The margin defines the space between the element and its neighbours. You can speficy values for each of the 4 directions!";
+    background-color: #D61C4E;
+    border: 3px solid #a1163b;
+    border-radius: 15px;
+    position: absolute;
+    text-align: left;
+    color: black;
+    display: block;
+    padding: 1em;
+    width: 75%;
+    left: 12.5%;
+    line-height: normal;
+    top: -75px;
+    opacity: 0;
+    transition: opacity .1s;
+}
+#margin:hover:after {
+    opacity: 100%;
 }
 #border {
-    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
-}
-#border::before {
-    content: "Border";
-    font-size: 1.4em;
-    position: absolute;
-    left: 0.5%;
-    top: 3.7%;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
+    background-color: #F77E21;
+    width: 75%;
+    height: 300px;
+    left: 12.5%;
+    top: 50px;
 }
 #border::after {
     content: "The border defines 4 visible lines that surround the HTML element, you can add whacky colours and styles to these lines!";
-    display: block;
+    background-color: #F77E21;
+    border: 3px solid #de711e;
+    border-radius: 15px;
     position: absolute;
-    top: 0;
-    width: fit-content;
-    padding: 1em;
     text-align: left;
-    color: white;
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    color: black;
+    display: block;
+    padding: 1em;
+    width: 75%;
+    left: 12.5%;
+    line-height: normal;
+    top: -100px;
+    opacity: 0;
+    transition: opacity .1s;
+}
+#border:hover:after {
+    opacity: 100%;
 }
 #padding {
-    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    background-color: #FAC213;
+    width: 50%;
+    height: 200px;
+    left: 25%;
+    top: 100px;
 }
-#padding::before {
-    content: "Padding";
-    font-size: 1.4em;
+#padding::after {
+    content: "The padding defines the space between the content and the border. Useful for adding space around images or frames!";
+    background-color: #FAC213;
+    border: 3px solid #e1ad10;
+    border-radius: 15px;
     position: absolute;
-    left: 0.5%;
-    top: 3.7%;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
+    text-align: left;
+    color: black;
+    display: block;
+    padding: 1em;
+    width: 75%;
+    left: 12.5%;
+    line-height: normal;
+    top: -120px;
+    opacity: 0;
+    transition: opacity .1s;
+}
+#padding:hover:after {
+    opacity: 100%;
 }
 #content {
-    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    background-color: #FEF9A7;
+    width: 25%;
+    height: 100px;
+    left: 37.5%;
+    top: 150px;
 }
-#content::before {
-    content: "Content";
-    font-size: 1.4em;
+#content::after {
+    content: "The content defines the data that the element tries to display, from words to images!";
+    background-color: #FEF9A7;
+    border: 3px solid #d5d28c;
+    border-radius: 15px;
     position: absolute;
-    left: 0.5%;
-    top: 3.7%;
+    text-align: left;
+    color: black;
+    display: block;
+    padding: 1em;
     width: 100%;
-    text-align: center;
-    font-weight: bold;
+    line-height: normal;
+    top: -200px;
+    opacity: 0%;
+    transition: opacity .1s;
+}
+#content:hover:after {
+    opacity: 100%;
 }
