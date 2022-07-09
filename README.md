@@ -17,3 +17,5 @@ Turns out chromium broswers disable autoplay and audio needs to have users inter
 https://css-tricks.com/play-sound-on-hover/
 https://developer.mozilla.org/en-US/docs/Web/CSS/filter
 https://loading.io/css/
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event
+https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
