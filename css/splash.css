@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@500&family=Poppins:ital,wght@0,300;1,300&display=swap');
+/*
+    // Title font
+    font-family: 'Finlandica', sans-serif;
+    // Page font
+    font-family: 'Poppins', sans-serif;
+*/
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #66BFBF;
+    color: rgb(68, 52, 52);
+    height: 100%;
+    overflow: hidden;
+}
+h1 {
+    font-family: 'Finlandica', sans-serif;
+    text-transform: uppercase;
+}
+h1 span {
+    font-size: 1.5em;
+}
+
+/* ============== ANIMATIONS ================= */
+@keyframes diagonal-move-fade-out {
+    
+    0% {
+        top: 0;
+        right: 0;
+        opacity: 100%;
+    }
+
+    90% {
+        top: 100vh;
+        right: 100vw;
+        opacity: 0%;
+    }
+}
+@keyframes fadein {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+@keyframes fadeout {
+    0% {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+    
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+@keyframes color-rainbow {
+    0% {
+        color: #E82121aa;
+    }
+    20% {
+        color: #139A43aa;
+    }
+    40% {
+        color: #2685E3aa;
+    }
+    60% {
+        color: #A639BFaa;
+    }
+    80% {
+        color: #FFB41Faa;
+    }
+    100% {
+        color: #E82121aa;
+    }
+}
+@keyframes border-left-rainbow {
+    0% {
+        border-left-color: #E82121;
+    }
+    20% {
+        border-left-color: #139A43;
+    }
+    40% {
+        border-left-color: #2685E3;
+    }
+    60% {
+        border-left-color: #A639BF;
+    }
+    80% {
+        border-left-color: #FFB41F;
+    }
+    100% {
+        border-left-color: #E82121;
+    }
+}
+@keyframes border-right-rainbow {
+    0% {
+        border-right-color: #E82121;
+    }
+    20% {
+        border-right-color: #139A43;
+    }
+    40% {
+        border-right-color: #2685E3;
+    }
+    60% {
+        border-right-color: #A639BF;
+    }
+    80% {
+        border-right-color: #FFB41F;
+    }
+    100% {
+        border-right-color: #E82121;
+    }
+}
+@keyframes border-top-rainbow {
+    0% {
+        border-top-color: #E82121;
+    }
+    20% {
+        border-top-color: #139A43;
+    }
+    40% {
+        border-top-color: #2685E3;
+    }
+    60% {
+        border-top-color: #A639BF;
+    }
+    80% {
+        border-top-color: #FFB41F;
+    }
+    100% {
+        border-top-color: #E82121;
+    }
+}
+@keyframes border-bottom-rainbow {
+    0% {
+        border-bottom-color: #E82121;
+    }
+    20% {
+        border-bottom-color: #139A43;
+    }
+    40% {
+        border-bottom-color: #2685E3;
+    }
+    60% {
+        border-bottom-color: #A639BF;
+    }
+    80% {
+        border-bottom-color: #FFB41F;
+    }
+    100% {
+        border-bottom-color: #E82121;
+    }
+}
+@keyframes border-shrink {
+    0% {
+        border-width: 10px;
+    }
+    100% {
+        border-width: 0px;
+    }
+}
+
+/* ============= Splash Screen =============== */
+#splash {
+    z-index: 99;
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    /* clip-path: polygon(80% 0, 100% 30%, 100% 100%, 0 100%, 0 0); */
+    color: black;
+    animation: diagonal-move-fade-out 3s 8s 1 forwards; 
+    /* forwards will keep state defined at end of animation */
+}
+#splash .inner-border {
+    /* inner border width set here, match with animation */
+    border: 10px solid transparent; 
+    position: fixed;
+    height: 90vh;
+    width: 95vw;
+    margin: 5vh auto;
+    left: 2.5vw;
+
+    /* delay of 1.05s creates an illusion of the colours travelling from one border to the next */
+    animation: border-left-rainbow .5s ease .5s infinite
+            , border-top-rainbow .5s ease 1.1s infinite
+            , border-right-rainbow .5s ease 1.7s infinite
+            , border-bottom-rainbow .5s ease 2.3s infinite
+            , border-shrink 1s ease 7.5s 1 forwards;
+}
+#splash .text {
+    text-align: center;
+    margin-top: 5vh;
+    opacity: 0;
+}
+#splash h2.text {
+    /* larger margin for first child */
+    margin-top: 35vh;
+    font-size: 3em;
+    
+    animation: fadein 1s ease 3.5s 1 forwards
+            , fadeout 1s ease 7s 1 forwards;
+}
+#splash h3 {
+    font-size: 2em;
+    animation: fadein 1s ease 4s 1 forwards
+            , fadeout 1s ease 6.5s 1 forwards;
+}
+#splash h1 {
+    font-size: 4em;
+    animation: fadein 1s ease 4.5s 1 forwards
+             , fadeout 1s ease 6s forwards;
+}
+
+/* ============== LSD Hourglass ================= */
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-hourglass:after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #FF0063 transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+#loading {
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+}
