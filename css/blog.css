@@ -13,7 +13,7 @@ html {
     font-family: 'Poppins', sans-serif;
     background-color: #66BFBF;
     font-size: 16px;
-    color: rgb(68, 52, 52);
+    color: #333;
     height: 100%;
 }
 h1 {
@@ -125,3 +125,113 @@ h1#logo:hover {
     background: #555;
 }
 
+/* =============== Main Column ============= */
+#main.column {
+    width: 650px;
+    min-height: 100vh;
+    margin: 50px auto;
+    border-radius: 3px;
+    overflow: hidden;
+}
+#main.column figure {
+    width: 100%;
+    min-height: 200px;
+    background: url(../images/banner.png);
+}
+#main.column.post {
+    background-color: white;
+    width: 800px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* ============ Blog Holder ============ */
+.blog-holder {
+    background-color: white;
+    border-radius: 7px;
+    border: 1px solid #ff0062a8;
+    padding: 2em;
+    margin-bottom: 10px;
+}
+#main.post .blog-holder {
+    border: none;
+    padding: 2em 3em;
+}
+#main > div:nth-child(2) {
+    border-radius: 0 0 7px 7px;
+}
+/* ============ Author =============== */
+.author-holder {
+    clear: both;
+}
+.author-holder img {
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    float: left;
+}
+.author-holder h6 {
+    font-weight: 100;
+}
+.author {
+    float: left;
+    padding-left: 10px;
+}
+/* ============ Metadata =============== */
+.metadata {
+    padding-left: 45px;
+}
+.metadata a {
+    color: #333;
+    text-decoration: none;
+    transition: color .1s;
+}
+.metadata a:hover {
+    color: #FF0063;
+}
+.tags {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.tag {
+    display: inline-block;
+    font-size: 0.8em
+}
+/* ============ Interactions =============== */
+.interactions {
+    font-size: 0.8em;
+}
+.reactions::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url(../images/heart.png) center center no-repeat;
+    background-size: cover;
+}
+.comments::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    background: url(../images/chat.png) center center no-repeat;
+    background-size: cover;   
+}
+.read-time {
+    float: right;
+}
+
+/* ============= Blog Post ================= */
+#main.post .metadata {
+    padding: 0;
+}
+#main.post .metadata h2 {
+    font-size: 3em;
+}
