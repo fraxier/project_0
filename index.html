@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/splash.css">
     </head>
 
     <body>
@@ -19,160 +19,17 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <!-- <div id="splash">
-            <div class="inner-border">
-                <button>Skip</button>
-            </div>
-            
+        <div id="splash">
+            <div class="inner-border"></div>
+
             <h2 class="text">Development Blog Website</h2>
 
             <h3 class="text">BY</h3>
 
             <h1 class="text">FRAnCIS</h1>
-            
-        </div> -->
-        
-        <audio id="bgm" controls loop>
-            <source src="./sounds/FFXIV_Uldah.mp3" type="audio/mp3">
-        </audio>
-        <nav>
-            <a href="#intro">
-                <h1 id="logo">Francis</h1>
-            </a>
-            <ul id="navigation">
-                <a class="teehee" href="#git"><img class="nav-icon" src="./images/DPSRole.png"/><li>Git/CLI</li></a>
-                <a class="teehee" href="#html"><img class="nav-icon" src="./images/TankRole.png"/><li>HTML</li></a>
-                <a class="teehee" href="#css"><img class="nav-icon" src="./images/HealerRole.png"/><li>CSS</li></a>
-                <a href="#"><img class="nav-icon" src="./images/BlueMage.png"/><li>Secret Blog</li></a>
-            </ul>
-            
-        </nav>
-        
-        <div id="banner">
-            <div class="announcement">
-                <img src="./images/tataru.png" alt="Why it's Tataru!" title="Where are you going Tataru?"/>
-                <img src="./images/castaway-chocobo-chick.png" alt="Baby blue chocoboo!" title="Chocobaby blue!" />
-                <img src="./images/coblyn.png" alt="Cob-Coblyn for the win!" title="Rock on in coblyn!" />
-            </div>
         </div>
-        <div class="container">
-            <section id="intro">
-                <img src="./images/fat-cat.png"/>
-                <h1>Hello World!</h1>
-                <p>Welcome to my showcase website! Please experience a little bit of the things that I picked up along the way. My design skills/taste is very questionable! Question everything! I would appreciate the feedback, plus, I'm still learning how to develop a foundation or best practices when it comes to HTML & CSS so the code may be sloppy.</p><br>
-                
-                <p>In saying that please point out whatever you think could be implemented better and I'll take it all onboard! I have added some ffxiv spice to keep things lively, I hope you enjoy it as much as I do having added them!</p><br>
-                <p>Once again, very much appreciated! Please enjoy your time here :)</p><br> 
-                <p>Kind Regards<br></p>
-                <h1>Francis</h1>
-            </section>
-            <section id="git">
-                <h1>Git/CLI</h1>
-                <p>The worst part about programming is finding out that you wake up one day and realise that your code doesn't work! Or even worse... your computer spontanesouly self combusted! In either case you need to find a working copy of your code stat.
-                <br>Welcome, GIT.</p>
-                <br>
-                <p>Git works from the command line (or application iirc) and allows you to store your work locally and on the cloud. It helps programmers implement version control for their projects and lets multiple users work independently, without the headache of untangling where Bob's code ends and Sally's begins.</p>
-                <br>
-                <p>Here are some example commands and their explanations</p>
-                <div class="terminal">
-                    <div class="bar">
-                        <img src="./images/ubuntu-icon.ico"/>
-                        <span>frax@EORZEA: ~/Development/code/phase-0/...</span>
-                        <p>×</p>
-                        <p>&#9633;</p>
-                        <p>─</p>
-                    </div>
-                    <i></i><span>git init - Initizialises the directory as a Git repo, i.e. Git will now pay attention to what happens in this directory.</span>
-                    <br><br>
-                    <i></i><span>git status - Tells us what branch we are currently working on, the status of our commits on the branch and what files are being watched or have changes.</span>
-                    <br><br>
-                    <i></i><span>git add - Use this when you want to add a file to your next commit. This will make sure that git looks for changes to this file across your commits.</span>
-                    <br><br>
-                    <i></i><span>git commit - This will create some meta data to associate the added files together. It's useful to include your own message with the -m flag!</span>
-                    <br><br>
-                    <i></i><span>git push - Send your last commit to your online repository, this will send any changes/commits from your local copy to your remote copy where you can see a more macroscopic look on the history of your work!</span>
-                </div>
-            </section>
-            <section id="html">
-                <h1>HTML</h1>
-                <p>HTML provides web pages with the skeleton of its content. Working with HTML was like working with sticks and stones, all rigid and structural. It does however allow us to focus on what's important when it comes to including it on a webpage.</p>
-                <br>
-                <p>Separating text from code and images alike gives us some direction when trying to navigate the sometimes entangled world wide web of files and media.</p>
-                <br>
-                <p>HTML achieves this with TAGS. HTML has tags for everything! Thinking of using a div? <b>¡THINK AGAIN!</b></p>
-                <p><b>TAG THAT GOOD THING WITH</b> something <i>S E M A N T I C</i></p>
-                <br>
-                <p>Have a gander at these example tags</p>
-                <table id="tag-table">
-                    <tr>
-                        <thead>    
-                            <th scope="col">Tag name</th>
-                            <th scope="col">Example</th>
-                        </thead>
-                    </tr>
-                    <tr>
-                        <th scope="row">code</td>
-                        <td>
-                            <code>string mentalState = hasChocolate ? "cloud9 babyyy" : "life sucks";</code>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">form</td>
-                        <td>
-                            <form>
-                                <legend><h2>What party roles do you like to play?</h2></legend>
-                                <div class="role-check">
-                                    <label for="tank"><p>Tank</p><img src="./images/TankRole.png" alt="Bonk!!" title="Bonk!!"/></label>
-                                    <input type="checkbox" id="tank" name="tank" value="Tank">
-                                </div>
-                                <div class="role-check">
-                                    <label for="healer"><p>Healer</p><img src="./images/HealerRole.png" alt="Look at my stick!" title="Look at my stick!"/></label>
-                                    <input type="checkbox" id="healer" name="healer" value="healer">
-                                </div>
-                                <div class="role-check">
-                                    <label for="dps"><p>Damaaage</p><img src="./images/DPSRole.png" alt="I'mma firin' mah lazaa!" title="I'mma firin' mah lazaa!"/></label>
-                                    <input type="checkbox" id="dps" name="dps" value="dps">
-                                </div>
-                            </form>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">audio</td>
-                        <td><audio controls title="Careful! I'm loud :D">
-                            <source src="./sounds/FFXIV_Enlist_Immortal_Flames.mp3" type="audio/mp3">
-                        </audio></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">iframe</td>
-                        <td><div style="width:480px; margin: 0 auto;"><iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/KGf5wKBgdhbTwDh1dK/video" width="480"></iframe></div></td>
-                    </tr>
-                </table>
-            </section>
-            <section id="css">
-                <h1>CSS</h1>
-                <p>CSS, also known as Cascading Style Sheet, is where the fun starts to happen. HTML is cool and all but CSS? Just <span>Wow.</span>Where to start?</p>
-                <br>
-                <p>Actually, the best place to start is what is known as the box model. Remember all those tags and divs from HTML? Now imagine every one of those contained in their own little 4 cornered box. CSS allows us to manipulate the width, height, length, space and S T Y L E that goes on inside these boxes.</p>
-                <br>
-                <p>Let's dive in and break down the components of the CSS box model</p>
-
-                <div id="box-model">
-                    <div id="margin" class="model">
-                        <h2>Margin</h2>
-                    </div>
-                    <div id="border" class="model">
-                        <h2>Border</h2>
-                    </div>
-                    <div id="padding" class="model">
-                        <h2>Padding</h2>
-                    </div>
-                    <div id="content" class="model">
-                        <h2>Content</h2>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <script src="./js/main.js" defer></script>
-
+        <div class="lds-hourglass"></div>
+        <h1 id="loading">Loading</h1>
+        <script src="./js/main.js"></script>
     </body>
 </html>
