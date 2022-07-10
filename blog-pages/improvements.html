@@ -48,7 +48,22 @@
                     </ul>
                 </section>
                 <article class="blog-post">
-
+                    <p>Creating a website from scratch is a very involved and certainly delicate form of work. There are a lot of moving parts and those moving parts are often entangled with a multitude of other parts. The things that can go wrong are usually categorised into the following:
+                        Trying something new, the volume of work, the unknown, design choices  and FLOATS. Specifically, aligning elements vertically!</p>
+                    <br>
+                    <p>I seem to understand more or less how to get things side by side with the use of float, inline-block, line-height and position but why does aligning something vertically not come as easily? A lot of time was used figuring out how to get an image looking like it was at the same level with the text. I think starting from now I'm going to stick with a weighted-list of solutions that I know have worked before to align things vertically. That way when I get to the end of the list I can say to myself whether or not it's worth keeping the element or scrapping it and staying sane...</p>
+                    <br>
+                    <p>Another time consuming practice, came up due to poor planning. Well, it comes hand in hand with the 'Trying something new' category of things going wrong. When you try something new, it becomes a little difficult to see what is involved until after you finished. There is unfortunately a cascading effect of work when it comes to developing a website. For instance, creating the splash screen was cool and it worked out great! But it became apparent that there were two things going wrong after completing it.</p>
+                    <br>
+                    <p>The splash screen, on its first iteration, took up to 12 seconds to fully animate and with no way of skipping it, every refresh of the page to update content or styling resulted in a 12 second wait for the splash screen to finish. I came up with a solution of adding a skip button to disable the animation upon user interaction, unfortunately the only answer I could find on how to implement it required javascript.</p>
+                    <br>    
+                    <p>I told myself that I would solely focus on HTML and CSS for this project so I couldn't accept the javascript solution so I just commented out the splash screen HTML to continue working on other stuff. Thankfully the next solution I came up with did work out. I had decided to separate the splash screen into its own html file and then let the user click a link to navigate to the rest of the content. Unfortunately my lack of design skills resulted in an underwhelming and empty landing page after the splash screen animated off screen. My design sense couldn't let it stay so I opted to use a super basic javascript solution to automatically navigate to the home page.</p>
+                    <br>
+                    <p>Speaking of the unknown, my fun idea of adding background music to my website was upended and body slammed off a four-storey building when I discovered that chromium browsers disable autoplay of sound files on webpages. Further research resulted in workarounds that didn't work, even though others upvoted the solutions, so I had to rely less on hacks and think of another way to get the music playing automatically.</p>
+                    <br>
+                    <p>I ended up having to make use of javascript once again and had the music play when the user clicks on an anchor tag link which worked wonderfully. I originally didn't want to have the music player visible but even though the music was playing, controlling the volume became another thing altogether. Thus you can see it in the top right corner of the home page.</p>
+                    <br>
+                    <p>In summary, a lot of things could have gone more smoothly if I had a list of things that I should have accounted for closer to the start of the project. Speaking of which, if I had done that then I could have also accounted for the fact that I forgot about making the webpage mobile friendly i.e. making it responsive. It seems that's part of the learning process ^^;</p>
                 </article>
             </div>
         </div>
