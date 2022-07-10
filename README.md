@@ -37,3 +37,5 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event
 https://www.w3schools.com/howto/howto_js_redirect_webpage.asp
 
 https://thereadtime.com/
+
+https://www.flaticon.com/
