@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Software Engineering?</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/blog.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav>
+            <a href="../home.html">
+                <h1 id="logo">Francis</h1>
+            </a>
+            <ul id="navigation">
+                <a class="teehee" href="../home.html#git"><img class="nav-icon" src="../images/DPSRole.png"/><li>Git/CLI</li></a>
+                <a class="teehee" href="../home.html#html"><img class="nav-icon" src="../images/TankRole.png"/><li>HTML</li></a>
+                <a class="teehee" href="../home.html#css"><img class="nav-icon" src="../images/HealerRole.png"/><li>CSS</li></a>
+                <a href="../blog.html"><img class="nav-icon" src="../images/BlueMage.png"/><li>Secret Blog</li></a>
+            </ul>
+        </nav>
+
+        <div id="main" class="column post">
+            <div class="blog-holder">
+                <section class="author-holder clearfix">
+                    <img src="../images/face.png">
+                    <div class="author">
+                        <h5>Francis</h5>
+                        <h6>7 August 2022</h6>
+                    </div>
+                </section>
+                <section class="metadata">
+                    <h2>Phase 1 Javascript Project</h2>
+                    <ul class="tags">
+                        <li class="tag">#reflection</li>
+                        <li class="tag">#Javascript</li>
+                        <li class="tag">#Async/API</li>
+                        <li class="tag">#HTML</li>
+                        <li class="tag">#CSS</li>
+                        <li class="tag">#programming</li>
+                    </ul>
+                </section>
+                <article class="blog-post">
+                    <p>For this project we were tasked to create a SPA (single page application) incorporating what we learned about javascript and asynchronous API calls.</p>
+                    <br><p>I initially wanted to stray away from my tropes(?) and choose to make something broader reaching. As I do realise the things I like to make are not always an interest for others. So I decided to create something that could apply to anybody, a weather application.</p>
+                    <br><p>Throughout the planning process (an important part of development) I found that in all likelihood, there is a skillset out there just for reading through API documentation.</p>
+                    <p>An API is an application programming interface and is generally created to host and serve data in a digestable file format such as JSON short for Javascript object notation, if I remember correctly.</p>
+                    <br><p>I found a weather API called Accuweather that I thought was cool cause it served air and pollen data but as mentioned before, reading through the documentation is a skill in of itself.</p>
+                    <br><p>It took me a while to sort out what I wanted to use from the API and then the next step was to figure out a way to display the data.</p>
+                    <br><p>I went through one iteration having just learned about css grid with responsive web design in mind but that design was too clunky and the colours were clashing it was a good idea but I didn't feel like it was coming together.</p>
+                    <br><p>I came across a cool card design with a hover animation that actually displayed more HTML on the back! Plus I could add colours to the back and front :)</p>
+                    <br><p>I wanted to use a lot of Javascript stuff so I used deferred javascript loading, events, asynchronous function calls and of course the meat on the bone, DOM manipulation.</p>
+                    <br><p>Let me now talk a little bit about how I went about developing the application. I went about it with an iterative workflow, first prototyping the HTML and css to flesh out how the 'data' would be displayed on the page.</p>
+                    <br><p>For this, I used sample data, in essence it was data from a previous API call to Accuweather which I then saved the results to a local json file.</p>
+                    <br><p>Of course, I wouldn't use this fileand pull the data from it just yet, first I hardcoded the data to visualise the optimal representation of the data in HTML and CSS</p>
+                    <br><p>Once I was happy with the 'template' that I created I could then work on the logic. I followed the 'Best Practices' as mentioned on the Accuweather API and began with 'Locations' followed by 'Daily' and 'Hourly' forecasts.</p>
+                    <br><p>The API first needed a user to retrieve a key for the target city then use that key to make further calls to the other weather routes? end points? APIs???</p>
+                    <br><p>Surprisingly when it came to the stage to use the sample data, I discovered you can use the same fetch function and pass in a local directory path. Which made the process simpler when I would need to switch to live API calls. I would only need to change the path to be a URL. (I painfully found out github pages, where the site will be hosted, requires other urls from the page to be served on HTTPS. The only error I got from the console was a Cross-Origin- something something. I only discovered that URL was wrong when I copy pasted it manually into a browser window. Aaahh, the pains of debugging)</p>
+                    <br><p>As I was aware the API limited the use of the API to 50 calls a day I switched to serving the sample data locally first.</p>
+                    <br><p>This was mainly due to the fact that I would need to keep refreshing the page and making new API calls whenever something went wrong, either with the Javascript, HTML/CSS or logic errors.</p>
+                    <br><p>I created classes to house logic for the forecasts and as well creating the actual HTML elements for each card.To clarify, the API returns an array of objects that represent the locations or daily forecasts or hourly forecasts.</p>
+                    <br><p>Each of these objects would then be displayed on a card and each card would have to be created from scratch, so I delegated that task to the 'Makers'.</p>
+                    <br><p>Luckily I discovered the function <code>cloneNode()</code>. Passing in a true argument would allow the function to perform a deep clone of the HTML element and save that to the class.</p>
+                    <br><p>I would just then need to perform <code>querySelector()</code> on the clone to find the appropriate child element to insert the data. </p>
+                    <br><p>All in all, it was a long process and an exercise in design vs functionality vs perfectionism Dx and I hope you can see for yourself on the github page <a href="https://fraxier.github.io/phase-1-project/">here!</a></p>
+                </article>
+            </div>
+        </div>
+        <script src="../js/main.js" async defer></script>
+    </body>
+</html>
