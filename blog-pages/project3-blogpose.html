@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Software Engineering?</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/blog.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav>
+            <a href="../home.html">
+                <h1 id="logo">Francis</h1>
+            </a>
+            <ul id="navigation">
+                <a class="teehee" href="../home.html#git"><img class="nav-icon" src="../images/DPSRole.png"/><li>Git/CLI</li></a>
+                <a class="teehee" href="../home.html#html"><img class="nav-icon" src="../images/TankRole.png"/><li>HTML</li></a>
+                <a class="teehee" href="../home.html#css"><img class="nav-icon" src="../images/HealerRole.png"/><li>CSS</li></a>
+                <a href="../blog.html"><img class="nav-icon" src="../images/BlueMage.png"/><li>Secret Blog</li></a>
+            </ul>
+        </nav>
+
+        <div id="main" class="column post">
+            <div class="blog-holder">
+                <section class="author-holder clearfix">
+                    <img src="../images/face.png">
+                    <div class="author">
+                        <h5>Francis</h5>
+                        <h6>21 October 2022</h6>
+                    </div>
+                </section>
+                <section class="metadata">
+                    <h2>Phase 3 Javascript Project</h2>
+                    <ul class="tags">
+                      <li class="tag">#Ruby</li>
+                      <li class="tag">#Nokogiri</li>
+                      <li class="tag">#Scrape</li>
+                      <li class="tag">#CLI</li>
+                      <li class="tag">#Language</li>
+                    </ul>
+                </section>
+                <article class="blog-post">
+                  
+                  <p>Project time came around once again and this time we were to use the backend programming language Ruby! And to further cement the idea that Ruby handles backend functionality we were tasked with creating a command line interface (CLI). Meaning the interface would be limited to the console, oh nooo. But that wouldn’t stop me from adding a little design/interactivity, I’d have this thought stuck in my head from the very beginning.</p>
+                  <br>
+                  <p>The CLI project requirements were to provide access to data from a web page as well as allow the user the option to get more information on the data retrieved from the website. These requirements will make more sense as the project nears completion.</p>
+                  <br>
+                  <p>The first hour into the project was spent exploring websites that might be suitable for ‘retrieval’. Using Ruby one can ‘scrape’ data from a web page. Scraping is a common activity that refers to code that parses the DOM/web page to extract useful information.</p>
+                  <br>
+                  <p>Ruby has a gem called Nokogiri that is often used for the purpose of scraping. After some random searches I kept coming back between scraping Steam and Reddit. In the end I settled with Steam because it would allow for extendability, my idea being along the lines of creating a watchlist or maybe shopping cart.</p>
+                  <br>
+                  <p>I never got to that extra feature mainly due to some of the complications I encountered when both scraping and navigating the raw and processed data. The first issue arose when I realised after a frustrating 30-45mins that Nokogiri does not natively have the capability to scrape dynamic web pages.</p>
+                  <br>
+                  <p>Imagine a web page with the javascript turned off, that is the same resource that Nokogiri would have access to when it loads a web page to try to scrape the data. A lot of debugging allowed me to come to that conclusion and after checking on google I was able to confirm it with similar stories.</p>
+                  <br>
+                  <p>It was a big shame because the front page of Steam has the good stuff like featured games and specially discounted games. I ended up having to use the store steam search page. Which turned out to be pretty straightforward, yet to achieve the functionality I wanted would require a bit more effort than what my 9 to 5 job would allow.</p>
+                  <br>
+                  <p>I knuckled down and began working on the CLI, it quickly became bloated with all the functionality in one file. I decided after having finished most of the functionality to separate the responsibilities into different classes. This proved to be a blessing because it helped me overcome the second issue that I came across finishing this project.</p>
+                  <br>
+                  <p>The main functionality I wanted to incorporate into my CLI was the ability to read user input from the up and down arrow keys! This was not possible with the Ruby gets method or at least was not immediately feasible with my clear lack of experience. I stumbled across a gem called Remedy that did a whole lot of terminal logic and allowed me the functionality I sought.</p>
+                  <br>
+                  <p>Problem was it did not work well with the current way of gets and puts ‘ing things in the terminal. Remedy, from my understanding, created a new terminal ‘view’ and read and prompted input from its own methods. As aforementioned this was not as big a problem due to the separation of concerns I implemented in my code. I still found the experience of refactoring such large parts of my code uncomfortable. Every line I changed to be aligned with the Remedy workflow made me think it was going to break.</p>
+                  <br>
+                  <p>This spelt the end of most of my worries and I was able to push through and create a Steam Store Search CLI. It would prompt users to construct a search which would in the backend generate a url with appropriate parameters before using this url with Nokogiri to scrape the results.</p>
+                  <br>
+                  <p>The results would then be defined as instances of a class called GameSearchResult with initial scraped information such as Name and Price. The CLI then displays the search results in a line by line list where the user can navigate up and down with the arrow keys. Hitting enter achieves the second project requirement of going one level deep to be able to get more data about the game; Description, Review Sentiment, Developers.</p>
+                  <br>
+                  <p>It’s definitely the most complicated CLI I’ve ever coded but the most satisfying part of the coding experience was the refactoring and separating functionality into different classes. It really gave the feeling of an almost plug and play environment.</p>
+                  <br>
+
+                </article>
+            </div>
+        </div>
+        <script src="../js/main.js" async defer></script>
+    </body>
+</html>
